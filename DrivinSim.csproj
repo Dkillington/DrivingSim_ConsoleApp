@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.0.4.421302\build\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.props" Condition="Exists('packages\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.0.4.421302\build\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,11 +49,41 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Constants\Laws.cs" />
+    <Compile Include="Data\DeltaTime.cs" />
+    <Compile Include="Data\GameSave.cs" />
+    <Compile Include="Data\Location.cs" />
+    <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\Road.cs" />
+    <Compile Include="Functionality\Managers\PoliceManager.cs" />
+    <Compile Include="Data\Settings.cs" />
+    <Compile Include="Functionality\Managers\Game.cs" />
+    <Compile Include="Functionality\Managers\GameSaveManager.cs" />
+    <Compile Include="Functionality\Managers\DrivingManager.cs" />
     <Compile Include="DrivingSimulator.cs" />
+    <Compile Include="Data\Factories\VehicleFactory.cs" />
+    <Compile Include="Data\Models\Engine.cs" />
+    <Compile Include="Data\Factories\EngineFactory.cs" />
+    <Compile Include="Data\Models\Vehicles\Vehicle.cs" />
+    <Compile Include="Functionality\Managers\Unused\EventManager.cs" />
+    <Compile Include="Functionality\Managers\Unused\FunctionalityManager.cs" />
+    <Compile Include="Functionality\Managers\Unused\RoadManager.cs" />
+    <Compile Include="Functionality\TextFunctionality.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Directory.Build.props" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.0.4.421302\build\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.0.4.421302\build\Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers.props'))" />
+  </Target>
 </Project>
