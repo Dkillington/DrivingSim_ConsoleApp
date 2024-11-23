@@ -1,0 +1,7 @@
+*.suo
+*.vsidx
+*.props
+*.typemap
+
+/bin
+/obj
