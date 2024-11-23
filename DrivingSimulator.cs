@@ -1,7 +1,7 @@
-﻿using DrivingSimulator.Functionality;
+﻿using DrivinSim.Functionality;
 using System;
 
-namespace DrivingSimulator
+namespace DrivinSim
 {
     public class DrivingSimulator
     {
@@ -17,7 +17,8 @@ namespace DrivingSimulator
         {
             Game.Instance.Start();
         }
-        private static void Exit()
+
+        static void Exit()
         {
             Environment.Exit(0);
         }
