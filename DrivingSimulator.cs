@@ -1,7 +1,7 @@
-﻿using DrivinSim.Functionality;
+﻿using DrivingSimulator;
 using System;
 
-namespace DrivinSim
+namespace DrivingSimulator
 {
     public class DrivingSimulator
     {

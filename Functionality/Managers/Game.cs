@@ -1,8 +1,9 @@
 ﻿using DrivingSimulator.Data;
+using DrivingSimulator.Functionality;
 using System;
 using System.Collections.Generic;
 
-namespace DrivingSimulator.Functionality
+namespace DrivingSimulator
 {
     internal class Game
     {
@@ -11,9 +12,9 @@ namespace DrivingSimulator.Functionality
         public static Game Instance => instance ??= new();
 
         // Belongs to specific object
-        public readonly DeltaTime dt;
-        public readonly TextFunctionality tf;
-        public readonly GameSaveManager gsm;
+        public readonly DeltaTime dt = new();
+        public readonly TextFunctionality tf = new();
+        public readonly GameSaveManager gsm = new();
 
         private bool playingGame = true;
         private DrivingManager drivingManager;
@@ -21,9 +22,6 @@ namespace DrivingSimulator.Functionality
         // Constructor
         public Game()
         {
-            tf = new();
-            dt = new();
-            gsm = new();
         }
 
         // Methods
@@ -54,15 +52,7 @@ namespace DrivingSimulator.Functionality
         }
         private void NewGame()
         {
-            WelcomeBack();
-
             gsm.NewGame();
-
-
-            void WelcomeBack()
-            {
-                //tf.Write("Hey!", true);
-            }
         }
     }
 }
