@@ -1,4 +1,4 @@
-﻿namespace DrivinSim.Data
+﻿namespace DrivingSimulator.Data
 {
     internal class Location
     {

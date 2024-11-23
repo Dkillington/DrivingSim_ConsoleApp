@@ -1,4 +1,4 @@
-﻿namespace DrivinSim.Models
+﻿namespace DrivingSimulator.Models
 {
     public class EngineFactory
     {

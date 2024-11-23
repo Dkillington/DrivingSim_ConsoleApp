@@ -1,9 +1,9 @@
-﻿using DrivinSim.Data;
-using DrivinSim.Functionality;
+﻿using DrivingSimulator.Data;
+using DrivingSimulator.Functionality;
 using System;
 using System.Diagnostics;
 
-namespace DrivinSim
+namespace DrivingSimulator
 {
     public class DrivingManager
     {

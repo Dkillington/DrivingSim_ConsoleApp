@@ -12,3 +12,10 @@ C:\Projects\C#\Console Applications\[Games]\DrivinSim\obj\Debug\DrivinSim.csproj
 C:\Projects\C#\Console Applications\[Games]\DrivinSim\obj\Debug\DrivinSim.csproj.CoreCompileInputs.cache
 C:\Projects\C#\Console Applications\[Games]\DrivinSim\obj\Debug\DrivinSim.exe
 C:\Projects\C#\Console Applications\[Games]\DrivinSim\obj\Debug\DrivinSim.pdb
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\bin\Debug\DrivinSim.exe.config
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\bin\Debug\DrivinSim.exe
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\bin\Debug\DrivinSim.pdb
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\obj\Debug\DrivinSim.csproj.AssemblyReference.cache
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\obj\Debug\DrivinSim.csproj.CoreCompileInputs.cache
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\obj\Debug\DrivinSim.exe
+D:\David (MAIN)\C#\Github\DrivingSim_ConsoleApp\obj\Debug\DrivinSim.pdb

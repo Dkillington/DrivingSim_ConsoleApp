@@ -1,7 +1,7 @@
-﻿using DrivinSim.Data;
+﻿using DrivingSimulator.Data;
 using System.Collections.Generic;
 
-namespace DrivinSim.Functionality
+namespace DrivingSimulator.Functionality
 {
     internal class GameSaveManager
     {

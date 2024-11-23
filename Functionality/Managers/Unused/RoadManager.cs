@@ -1,4 +1,4 @@
-﻿namespace DrivinSim.Functionality
+﻿namespace DrivingSimulator.Functionality
 {
     internal class RoadManager
     {

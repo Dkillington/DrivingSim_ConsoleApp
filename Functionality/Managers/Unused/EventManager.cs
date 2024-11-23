@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DrivinSim.Functionality.Managers
+namespace DrivingSimulator.Functionality.Managers
 {
     internal class EventManager
     {

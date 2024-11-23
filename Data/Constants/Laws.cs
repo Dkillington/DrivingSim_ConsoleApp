@@ -1,4 +1,4 @@
-﻿namespace DrivinSim.Constants
+﻿namespace DrivingSimulator.Constants
 {
     public class Laws
     {

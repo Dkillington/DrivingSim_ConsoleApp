@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace DrivinSim.Data
+namespace DrivingSimulator.Data
 {
     internal class PoliceManager
     {

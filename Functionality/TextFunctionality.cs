@@ -1,72 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 
-namespace DrivinSim.Functionality
+namespace DrivingSimulator.Functionality
 {
     internal class TextFunctionality
     {
         // Dependencies
         private readonly Random rnd;
+        private readonly List<string> invalidInputResponses;
 
         // Constructor
         public TextFunctionality()
         {
             rnd = new Random();
-        }
-
-        // Methods
-        public void Write(string text, bool awaitResponse = false)
-        {
-            Console.Write(text);
-
-            if (awaitResponse)
-            {
-                Console.ReadKey();
-            }
-        }
-        public void WriteLine(string text)
-        {
-            Console.WriteLine(text);
-        }
-        public void SayWrongResponse()
-        {
-            Console.Clear();
-            string response;
-            List<string> responses = new()
+            invalidInputResponses = new()
             {
                 "Oops. Wrong Response.",
                 "Wrong Key Pressed.",
                 "Invalid answer",
                 "Incorrect Key"
             };
-
-            response = responses[rnd.Next(responses.Count)];
-            Console.WriteLine(response);
-            Console.ReadKey();
-            Console.Clear();
-
         }
-        public void ResetCursor()
-        {
-            Console.SetCursorPosition(0, 0);
-        }
-        public ConsoleKey? GetInput()
-        {
-            ConsoleKey? consoleKey = null;
 
-            while (Console.KeyAvailable)
+        // Methods
+        public void Write(string text, bool awaitResponse = true, bool clearAfter = false)
+        {
+            PrivateWrite(false, text, awaitResponse, clearAfter);
+        }
+        public void WriteLine(string text, bool awaitResponse = true, bool clearAfter = false)
+        {
+            PrivateWrite(true, text, awaitResponse, clearAfter);
+        }
+        private void PrivateWrite(bool writeLine, string text, bool awaitResponse, bool clearAfter)
+        {
+            if (writeLine)
             {
-                consoleKey = Console.ReadKey(true).Key;
+                Console.WriteLine(text);
+            }
+            else
+            {
+                Console.Write(text);
             }
 
-            return consoleKey;
-        }
-        public void CancelRemainingInput()
-        {
-            while (Console.KeyAvailable)
+            if (awaitResponse)
             {
-               Console.ReadKey(true);
+                Console.ReadKey(true);
+            }
+
+            if (clearAfter)
+            {
+                Console.Clear();
             }
         }
         public string FormatString(string message, int spacing = 100)
@@ -153,6 +136,41 @@ namespace DrivinSim.Functionality
             int ConvertToIndex(int requestedNumber)
             {
                 return (requestedNumber - 1);
+            }
+        }
+        public string RandomFromList(List<string> list)
+        {
+            if (list == null || list.Count == 0)
+            {
+                return string.Empty;
+            }
+
+            return list[rnd.Next(0, list.Count)];
+        }
+        public void SayWrongResponse()
+        {
+            Write(RandomFromList(invalidInputResponses));
+        }
+        public void ResetCursor()
+        {
+            Console.SetCursorPosition(0, 0);
+        }
+        public ConsoleKey? GetInput()
+        {
+            ConsoleKey? consoleKey = null;
+
+            while (Console.KeyAvailable)
+            {
+                consoleKey = Console.ReadKey(true).Key;
+            }
+
+            return consoleKey;
+        }
+        public void CancelRemainingInput()
+        {
+            while (Console.KeyAvailable)
+            {
+               Console.ReadKey(true);
             }
         }
     }

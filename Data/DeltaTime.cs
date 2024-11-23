@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace DrivinSim.Data
+namespace DrivingSimulator.Data
 {
     // An object for getting a DeltaTime
     // Usage:

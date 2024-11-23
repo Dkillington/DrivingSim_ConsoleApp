@@ -1,9 +1,9 @@
-﻿using DrivinSim.Models;
-using DrivinSim.Models.Vehicles;
+﻿using DrivingSimulator.Models;
+using DrivingSimulator.Models.Vehicles;
 using System;
 using System.Collections.Generic;
 
-namespace DrivinSim.Factories
+namespace DrivingSimulator.Factories
 {
     public class VehicleFactory
     {

@@ -1,7 +1,7 @@
-﻿using DrivinSim.Data;
-using DrivinSim.Functionality;
+﻿using DrivingSimulator.Data;
+using DrivingSimulator.Functionality;
 
-namespace DrivinSim.Models.Vehicles
+namespace DrivingSimulator.Models.Vehicles
 {
     public class Vehicle
     {

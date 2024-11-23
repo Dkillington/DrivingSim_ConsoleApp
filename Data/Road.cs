@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DrivinSim.Data
+namespace DrivingSimulator.Data
 {
     internal class Road
     {

@@ -1,13 +1,13 @@
-﻿using DrivinSim.Factories;
-using DrivinSim.Models.Vehicles;
+﻿using DrivingSimulator.Factories;
+using DrivingSimulator.Models.Vehicles;
 using System.Collections.Generic;
 
-namespace DrivinSim.Data
+namespace DrivingSimulator.Data
 {
     internal class Player
     {
         public decimal Money { get; set; } = 0m;
-        public List<Vehicle> OwnedVehicles { get; set; }
+        public List<Vehicle> OwnedVehicles { get; set; } = new();
 
         public Vehicle Vehicle { get; set; }
 

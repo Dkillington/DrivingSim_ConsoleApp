@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DrivinSim.Functionality
+namespace DrivingSimulator.Functionality
 {
     internal class FunctionalityManager
     {
